@@ -2,9 +2,15 @@ import { createSlice } from "@reduxjs/toolkit";
 import { productType } from "../../../type";
 import toast from "react-hot-toast";
 
+interface UserInfo {
+  id: string;
+  name: string;
+  email: string;
+}
+
 interface InitialState {
   cart: productType[];
-  userInfo: any;
+  userInfo: UserInfo | null;
 }
 const initialState: InitialState = {
   cart: [],
