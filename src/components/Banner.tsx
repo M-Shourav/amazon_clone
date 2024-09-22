@@ -3,7 +3,6 @@ import { banner_1, banner_2, banner_3, banner_4, banner_5 } from "@/assets";
 import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import ProductList from "./ProductList";
 const Banner = () => {
   return (
     <>
