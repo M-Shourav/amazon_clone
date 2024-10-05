@@ -1,5 +1,5 @@
 import { getData } from "@/helpers";
-import { ProductType } from "../../type";
+import { productType } from "../../type";
 import ProductCard from "./ProductCard";
 import Container from "./Container";
 
@@ -10,7 +10,7 @@ const ProductList = async () => {
 
   return (
     <Container className=" py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-      {productArray?.map((product: ProductType) => (
+      {productArray?.map((product: productType) => (
         <ProductCard key={product?.id} product={product} />
       ))}
     </Container>

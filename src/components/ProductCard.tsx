@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ProductType } from "../../type";
+import { productType } from "../../type";
 import Rating from "./Rating";
 import { IoIosHeartEmpty, IoMdCheckboxOutline } from "react-icons/io";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import PriceFormated from "./PriceFormated";
 import AddToCartButton from "./AddToCartButton";
 
 interface Props {
-  product: ProductType;
+  product: productType;
 }
 
 const ProductCard = ({ product }: Props) => {
