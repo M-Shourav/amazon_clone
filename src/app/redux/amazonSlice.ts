@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { ProductType } from "../../../type";
 import toast from "react-hot-toast";
-import { productType } from "../../../type";
 
 interface UserInfoType {
   id: string;
@@ -9,7 +9,7 @@ interface UserInfoType {
 }
 
 interface InitialState {
-  cart: productType[];
+  cart: ProductType[];
   userInfo: UserInfoType | null;
 }
 

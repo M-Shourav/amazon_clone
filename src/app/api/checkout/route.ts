@@ -1,12 +1,12 @@
 import { NextResponse, NextRequest } from "next/server";
+import { ProductType } from "../../../../type";
 import Stripe from "stripe";
-import { productType } from "../../../../type";
 export const POST = async (request: NextRequest) => {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
   try {
     const requestBody = await request.json();
     const { item, email } = await requestBody;
-    const ModifiedProducts = await item?.map((item: productType) => ({
+    const ModifiedProducts = await item?.map((item: ProductType) => ({
       quantity: item?.quantity,
       price_data: {
         currency: "usd",

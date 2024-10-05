@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { productType } from "../../../type";
+import { ProductType } from "../../../type";
 import Link from "next/link";
 import AddToCartButton from "../AddToCartButton";
 import PriceFormated from "../PriceFormated";
@@ -9,7 +9,7 @@ import { deleteItems } from "@/app/redux/amazonSlice";
 import { FaCheck } from "react-icons/fa6";
 
 interface Props {
-  product: productType;
+  product: ProductType;
 }
 
 const CartProduct = ({ product }: Props) => {

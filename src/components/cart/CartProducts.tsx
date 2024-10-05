@@ -1,13 +1,13 @@
 "use client";
 import { useSelector } from "react-redux";
 import Container from "../Container";
-import { productType, StateType } from "../../../type";
+import { ProductType, StateType } from "../../../type";
 import CartProduct from "./CartProduct";
 import CartSummary from "./CartSummary";
 import Button from "../Button";
 
 const CartProducts = () => {
-  const { cart } = useSelector((state: StateType) => state?.amazone);
+  const { cart } = useSelector((state: StateType) => state?.amazon);
   return (
     <Container>
       {cart.length > 0 ? (
@@ -18,7 +18,7 @@ const CartProducts = () => {
           <div className="mt-10 lg:grid lg:grid-cols-12 lg:gap-10">
             <section className="col-span-7">
               <div className=" divide-y divide-gray-400 border-t border-b border-gray-400">
-                {cart?.map((item: productType) => (
+                {cart?.map((item: ProductType) => (
                   <CartProduct key={item?.id} product={item} />
                 ))}
               </div>

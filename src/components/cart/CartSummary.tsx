@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { productType } from "../../../type";
+import { ProductType } from "../../../type";
 import Button from "../Button";
 import Title from "../Title";
 import PriceFormated from "../PriceFormated";
 import { useSession } from "next-auth/react";
 import { loadStripe } from "@stripe/stripe-js";
 interface Props {
-  cart: productType[];
+  cart: ProductType[];
 }
 const CartSummary = ({ cart }: Props) => {
   const [totalamount, setTotalamount] = useState(0);

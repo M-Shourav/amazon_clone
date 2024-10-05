@@ -1,6 +1,6 @@
 "use client";
 import { FaCartShopping, FaMinus, FaPlus } from "react-icons/fa6";
-import { productType, StateType } from "../../type";
+import { ProductType, StateType } from "../../type";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addtocart,
@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 interface Props {
-  product: productType;
+  product: ProductType;
 }
 
 const AddToCartButton = ({ product }: Props) => {

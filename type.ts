@@ -1,41 +1,30 @@
-export interface productType {
-  availabilityStatus: string;
-  brand: string;
-  category: string;
-  description: string;
-  quantity: number;
-  dimensions: {
-    depth: number;
-    height: number;
-    width: number;
-  };
-  discountPercentage: number;
+export interface ProductType {
   id: number;
-  images: string[];
-  meta: {
-    createdAt: string;
-    updatedAt: string;
-    barcode: string;
-    qrCode: string;
-  };
-  minimumOrderQuantity: number;
+  title: string;
+  description: string;
+  category: string;
   price: number;
+  quantity: number;
+  discountPercentage: number;
   rating: number;
-  returnPolicy: string;
-  reviews: object[];
-  shippingInformation: string;
-  sku: string;
   stock: number;
   tags: string[];
-  thumbnail: string;
-  title: string;
-  warrantyInformation: string;
+  sku: string;
   weight: number;
+  brand: string;
+  warrantyInformation: string;
+  shippingInformation: string;
+  availabilityStatus: string;
+  reviews: string;
+  returnPolicy: string;
+  minimumOrderQuantity: number;
+  images: string[];
+  thumbnail: string;
 }
 
 export interface StateType {
-  amazone: {
-    cart: productType[];
-    userInfo: any;
+  amazon: {
+    cart: ProductType[];
+    userInfo: string;
   };
 }
